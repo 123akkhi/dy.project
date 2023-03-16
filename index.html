@@ -18,7 +18,22 @@
                 localStorage.setItem('name', name);
                 localStorage.setItem('email', email);
                 localStorage.setItem('phonenumber', phonenumber);
-                alert('Form submitted successfully!');
+                
+                // Create elements to display the stored values
+                const nameDisplay = document.createElement('p');
+                nameDisplay.textContent = 'Name: ' + name;
+                const emailDisplay = document.createElement('p');
+                emailDisplay.textContent = 'Email: ' + email;
+                const phoneDisplay = document.createElement('p');
+                phoneDisplay.textContent = 'Phone Number: ' + phonenumber;
+                
+                // Append the elements to the document
+                const displayDiv = document.createElement('div');
+                displayDiv.appendChild(nameDisplay);
+                displayDiv.appendChild(emailDisplay);
+                displayDiv.appendChild(phoneDisplay);
+                document.body.appendChild(displayDiv);
+                
             }
         </script>
     </body>
